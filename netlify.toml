@@ -1,6 +1,6 @@
 [build]
   command = "true"
-  publish = "./build"
+  publish = "./html"
 
 [functions]
   directory = "./functions"
