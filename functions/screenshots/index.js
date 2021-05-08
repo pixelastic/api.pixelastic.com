@@ -1,6 +1,11 @@
 const _ = require('golgoth/lodash');
 const chromium = require('chrome-aws-lambda');
 
+// TODO:
+// Need to accept ?query strings and #hashes
+// Need to accept passing custom args, like a unique hash for cache busting
+// Need to deploy and test
+
 module.exports = {
   async handler(event, _context) {
     const { targetUrl } = this.parseRequest(event);
