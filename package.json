@@ -2,7 +2,9 @@
   "devDependencies": {
     "aberlaas": "1.16.0"
   },
-  "files": ["lib/*.js"],
+  "files": [
+    "lib/*.js"
+  ],
   "license": "MIT",
   "main": "lib/main.js",
   "name": "api.pixelastic.com",
@@ -15,5 +17,8 @@
     "test": "./scripts/test",
     "test:watch": "./scripts/test-watch"
   },
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "dependencies": {
+    "netlify-cli": "3.28.0"
+  }
 }
