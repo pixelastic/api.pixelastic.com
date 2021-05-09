@@ -23,6 +23,6 @@
   "dependencies": {
     "chrome-aws-lambda": "9.1.0",
     "golgoth": "2.0.0",
-    "netlify-cli": "3.28.0"
+    "netlify-cli": "3.29.0"
   }
 }

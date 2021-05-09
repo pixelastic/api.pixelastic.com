@@ -1315,9 +1315,9 @@
     call-me-maybe "^1.0.1"
     glob-to-regexp "^0.3.0"
 
-"@netlify/build@^11.9.1":
+"@netlify/build@^11.10.0":
   version "11.10.0"
-  resolved "https://registry.npmjs.org/@netlify/build/-/build-11.10.0.tgz#9098d9b76a0259d65f57fced31e527eb11e130dd"
+  resolved "https://registry.yarnpkg.com/@netlify/build/-/build-11.10.0.tgz#9098d9b76a0259d65f57fced31e527eb11e130dd"
   integrity sha512-bTic0jyiiOTaHB3y0CLmJLuKmtB2eiLmEUmeZ7sGe/MdHuJ16rW+BrXSyv/+7mI1RFoAv5MyhFZHZSVoHMLAig==
   dependencies:
     "@bugsnag/js" "^7.0.0"
@@ -1480,7 +1480,7 @@
     rollup-plugin-terser "^7.0.2"
     typescript "^4.1.5"
 
-"@netlify/plugins-list@^2.10.0", "@netlify/plugins-list@^2.9.0":
+"@netlify/plugins-list@^2.10.0":
   version "2.10.0"
   resolved "https://registry.npmjs.org/@netlify/plugins-list/-/plugins-list-2.10.0.tgz#69a0db28889e8abe659f58dbe92a0f0be770bd1e"
   integrity sha512-JaK6604NU21J1akEsw2MBorZkKwCsfrosWmtQKjK+5qhuDBWsNlvmpzbIUwvHezKdCopozwec9hVEVrDSLsNWQ==
@@ -5344,7 +5344,7 @@ fresh@0.5.2:
   resolved "https://registry.npmjs.org/fresh/-/fresh-0.5.2.tgz#3d8cadd90d976569fa835ab1f8e4b23a105605a7"
   integrity sha1-PYyt2Q2XZWn6g1qx+OSyOhBWBac=
 
-from2-array@0.0.4:
+from2-array@0.0.4, from2-array@^0.0.4:
   version "0.0.4"
   resolved "https://registry.npmjs.org/from2-array/-/from2-array-0.0.4.tgz#eafc16b65f6e2719bcd57fdc1869005ac1332cd6"
   integrity sha1-6vwWtl9uJxm81X/cGGkAWsEzLNY=
@@ -8395,16 +8395,16 @@ nested-error-stacks@^2.0.0, nested-error-stacks@^2.1.0:
   resolved "https://registry.npmjs.org/nested-error-stacks/-/nested-error-stacks-2.1.0.tgz#0fbdcf3e13fe4994781280524f8b96b0cdff9c61"
   integrity sha512-AO81vsIO1k1sM4Zrd6Hu7regmJN1NSiAja10gc4bX3F0wd+9rQmcuHQaHVQCYIEC8iFXnE+mavh23GOt7wBgug==
 
-netlify-cli@3.28.0:
-  version "3.28.0"
-  resolved "https://registry.npmjs.org/netlify-cli/-/netlify-cli-3.28.0.tgz#c55953c97670d88dd3ec6a4dda0a06118b9ee0b1"
-  integrity sha512-Isz4VYi3XeB6kYHisWoywjMx/VEc/TTB4PJQr7Jcmbk/bhQE39hwN3BBf07tqGykBWeu1tcgVQuWnkuCQkwK0g==
+netlify-cli@3.29.0:
+  version "3.29.0"
+  resolved "https://registry.yarnpkg.com/netlify-cli/-/netlify-cli-3.29.0.tgz#2c90a4ddcd4f1bf16fa14ac9a3970181908fb64c"
+  integrity sha512-vIk8z1jP6v62iQvVYpPej3WovER04YB5CSVfiQhQwDWOE4JtuB1z3m3jRVcA7ouWrGpN94S+JkIS2MTiFykc8w==
   dependencies:
-    "@netlify/build" "^11.9.1"
+    "@netlify/build" "^11.10.0"
     "@netlify/config" "^6.4.4"
     "@netlify/framework-info" "^4.0.0"
     "@netlify/plugin-edge-handlers" "^1.11.7"
-    "@netlify/plugins-list" "^2.9.0"
+    "@netlify/plugins-list" "^2.10.0"
     "@netlify/traffic-mesh-agent" "^0.27.10"
     "@netlify/zip-it-and-ship-it" "^3.9.1"
     "@oclif/command" "^1.6.1"
@@ -8419,6 +8419,7 @@ netlify-cli@3.28.0:
     "@ungap/from-entries" "^0.2.1"
     ansi-styles "^5.0.0"
     ascii-table "0.0.9"
+    backoff "^2.5.0"
     better-opn "^2.1.1"
     body-parser "^1.19.0"
     boxen "^4.1.0"
@@ -8444,12 +8445,16 @@ netlify-cli@3.28.0:
     express-logging "^1.1.1"
     filter-obj "^2.0.1"
     find-up "^4.1.0"
+    flush-write-stream "^2.0.0"
+    folder-walker "^3.2.0"
+    from2-array "^0.0.4"
     fuzzy "^0.1.3"
     get-port "^5.1.0"
     gh-release-fetch "^1.1.0"
     git-repo-info "^2.1.0"
     gitconfiglocal "^2.1.0"
     hasbin "^1.2.3"
+    hasha "^5.2.2"
     http-proxy "^1.18.0"
     http-proxy-middleware "^1.0.0"
     https-proxy-agent "^5.0.0"
@@ -8478,13 +8483,16 @@ netlify-cli@3.28.0:
     ora "^4.1.1"
     p-event "^4.2.0"
     p-filter "^2.1.0"
+    p-map "^3.0.0"
     p-wait-for "^3.0.0"
+    parallel-transform "^1.2.0"
     parse-github-url "^1.0.2"
     parse-gitignore "^1.0.1"
     path-exists "^4.0.0"
     path-key "^3.1.1"
     path-type "^4.0.0"
     prettyjson "^1.2.1"
+    pump "^3.0.0"
     random-item "^3.0.0"
     raw-body "^2.4.1"
     resolve "^1.12.0"
@@ -8493,6 +8501,9 @@ netlify-cli@3.28.0:
     source-map-support "^0.5.19"
     static-server "^2.2.1"
     strip-ansi-control-characters "^2.0.0"
+    tempy "^0.3.0"
+    through2-filter "^3.0.0"
+    through2-map "^3.0.0"
     to-readable-stream "^2.1.0"
     update-notifier "^4.0.0"
     uuid "^8.0.0"
