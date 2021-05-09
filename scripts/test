@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -e
-NETLIFY_DEV_PORT=4567
+export NETLIFY_DEV_PORT=4567
 
 # Disable the opening of the browser
 export BROWSER=false

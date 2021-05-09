@@ -1,3 +1,8 @@
+const { toMatchImageSnapshot } = require('jest-image-snapshot');
+expect.extend({ toMatchImageSnapshot });
+const got = require('golgoth/got');
+const port = process.env.NETLIFY_DEV_PORT;
+
 describe('/screenshots/', () => {
   // Should update the netlify.toml so in dev I serve local files from html/dev
   // and not html/prod
@@ -8,6 +13,11 @@ describe('/screenshots/', () => {
   // and I should expect the returned element to match what is expected
   // I might need to look at Jest snapshots for that
   it('should work', async () => {
-    expect(true).toEqual(false);
-  });
+    const url = `http://localhost:${port}/screenshots/http/localhost:${port}/`;
+    const actual = await got(url, {
+      responseType: 'buffer',
+    });
+
+    expect(actual.rawBody).toMatchImageSnapshot();
+  }, 30000);
 });

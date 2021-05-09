@@ -4,15 +4,19 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Downloading external styles -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <title>api.pixelastic.com</title>
   </head>
   <body>
-    <!--
-      This should include:
-      - Default Tailwind so we have it ready
-      - Text
-      - Image, ideally from Cloudinary, with lazyloading of a placeholder
-      - External fonts
-    -->
+    <div class="container mx-auto py-3">
+      <div class="font-bold">This is a test file</div>
+
+      <!-- Downloading external images through a CDN -->
+      <img alt="Lazyloaded image" class="lazyload" data-src="https://images.weserv.nl?url=https%3A%2F%2Fpreview.redd.it%2Fysyf5kh6xxu61.jpg%3Fauto%3Dwebp%26s%3D1a20bb5e6e1616c9cc4722f882e9b96c805b9246" height="165" loading="lazy" src="data:image/png;;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAICAIAAABVpBlvAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAo0lEQVQImQGYAGf/AIl8bYN1ZXVvY3Z0Z3VrX2tlWACOg3aGfW+MjX5tYFNxamB1cGMAoIp5l4p7fHNjTEI1W0xDhHVmALKKerCon3d9dkE7M1ZJP5N6awCrmI2hhnaQhXZaST5aQzmdhHkAzMS/qKKeeXZ1QzItgXZvtayoAKmgnIWEdmVxbTc3M0ZANol3bgB3eHNZWlRycWhgZGBzcm2Lg39YBkDZTnezYwAAAABJRU5ErkJggg==" width="262"></p>
+    </div>
+
+    <!-- Downloading external scrips -->
+    <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script>
   </body>
 </html>
