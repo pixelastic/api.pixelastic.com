@@ -17,7 +17,7 @@
     "release": "./scripts/release",
     "serve": "./scripts/serve",
     "test": "./scripts/test",
-    "test:watch": "./scripts/test-watch"
+    "test:watch": "./scripts/test --watch"
   },
   "version": "0.0.1",
   "dependencies": {

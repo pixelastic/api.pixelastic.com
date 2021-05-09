@@ -1,4 +1,27 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 set -e
+NETLIFY_DEV_PORT=4567
 
+# Disable the opening of the browser
+export BROWSER=false
+
+# Kill all background processes started by this script when it ends, or is
+# stopped
+trap 'kill $(jobs -p)' EXIT
+
+# Start netlify dev
+netlify dev \
+  --port=$NETLIFY_DEV_PORT \
+  --dir=./html/test \
+  &>/dev/null \
+  &
+
+# Wait for the server to be running
+echo -n "Starting netlify dev server"
+until curl --output /dev/null --silent --head --fail http://localhost:$NETLIFY_DEV_PORT/; do
+  echo -n "."
+  sleep 1
+done
+
+# Running tests (potentially in watch mode)
 aberlaas test "$@"
