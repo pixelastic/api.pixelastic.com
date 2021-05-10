@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 set -e
-export NETLIFY_DEV_PORT=4567
 
 # Disable the opening of the browser
 export BROWSER=false
@@ -10,15 +9,12 @@ export BROWSER=false
 trap 'kill $(jobs -p)' EXIT
 
 # Start netlify dev
-netlify dev \
-  --port=$NETLIFY_DEV_PORT \
-  --dir=./html/test \
-  &>/dev/null \
-  &
+export NETLIFY_SERVER_RUNNING=1
+netlify dev &>/dev/null &
 
 # Wait for the server to be running
 echo -n "Starting netlify dev server"
-until curl --output /dev/null --silent --head --fail http://localhost:$NETLIFY_DEV_PORT/; do
+until curl --output /dev/null --silent --head --fail http://localhost:8888/; do
   echo -n "."
   sleep 1
 done

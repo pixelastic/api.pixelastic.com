@@ -17,13 +17,17 @@
     "lint:fix": "./scripts/lint-fix",
     "release": "./scripts/release",
     "serve": "./scripts/serve",
+    "serve:test": "./scripts/serve-test",
     "test": "./scripts/test",
+    "test:unit": "./scripts/test-unit",
+    "test:unit:watch": "./scripts/test-unit --watch",
     "test:watch": "./scripts/test --watch"
   },
   "version": "0.0.1",
   "dependencies": {
     "chrome-aws-lambda": "9.1.0",
     "golgoth": "2.0.0",
-    "netlify-cli": "3.29.0"
+    "netlify-cli": "3.29.0",
+    "normalize-url": "6.0.0"
   }
 }

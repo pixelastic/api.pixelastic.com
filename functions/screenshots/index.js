@@ -1,10 +1,5 @@
 const helper = require('./helper.js');
 
-// TODO:
-// Need to accept ?query strings and #hashes
-// Need to accept passing custom args, like a unique hash for cache busting
-// Need to deploy and test
-
 exports.handler = async (event, _content) => {
   const { targetUrl } = helper.parseRequest(event);
   const screenshot = await helper.getScreenshot(targetUrl);

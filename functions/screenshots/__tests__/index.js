@@ -1,23 +1,38 @@
+// TODO: Put toMatchImage in the setup file
 const { toMatchImageSnapshot } = require('jest-image-snapshot');
 expect.extend({ toMatchImageSnapshot });
-const got = require('golgoth/got');
-const port = process.env.NETLIFY_DEV_PORT;
 
-describe('/screenshots/', () => {
-  // Should update the netlify.toml so in dev I serve local files from html/dev
-  // and not html/prod
-  // Those files should have some stuff displayed
-  //
-  // I then query the /screenshot/ with a url to this local server
-  // I will need to handle the localhost:XXXX stuff, which might not work
-  // and I should expect the returned element to match what is expected
-  // I might need to look at Jest snapshots for that
-  it('should work', async () => {
-    const url = `http://localhost:${port}/screenshots/http/localhost:${port}/`;
+// Netlify functions can only run for 10s
+// TODO: Set tihs globally as well
+jest.setTimeout(10000);
+
+// TODO: Define this globally
+const describeWithServer = process.env.NETLIFY_SERVER_RUNNING
+  ? describe
+  : () => {
+      it('is skipped because it is an integration test', () => {
+        expect(true).toBe(true);
+      });
+    };
+
+const got = require('golgoth/got');
+
+describeWithServer('/screenshots/', () => {
+  it('should take a screenshot', async () => {
+    const targetUrl =
+      'http://localhost:8888/__tests__/screenshots/?query=stiff&sort=asc#anchor';
+
+    const suffix = targetUrl.replace('://', '/');
+    const url = `http://localhost:8888/screenshots/${suffix}`;
     const actual = await got(url, {
       responseType: 'buffer',
     });
 
-    expect(actual.rawBody).toMatchImageSnapshot();
-  }, 30000);
+    const errorMessage = dedent`
+      targetUrl: ${targetUrl}
+      url: ${url}
+    `;
+
+    expect(actual.rawBody, errorMessage).toMatchImageSnapshot();
+  });
 });
