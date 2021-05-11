@@ -3,7 +3,7 @@
     "aberlaas": "1.16.0",
     "jest-image-snapshot": "4.5.0",
     "netlify-cli": "3.29.0",
-    "puppeteer-core": "9.1.1"
+    "netlify-lambda": "2.0.6"
   },
   "files": [
     "lib/*.js"
@@ -12,6 +12,7 @@
   "main": "lib/main.js",
   "name": "api.pixelastic.com",
   "scripts": {
+    "build": "./scripts/build",
     "ci": "./scripts/ci",
     "husky:precommit": "./scripts/husky-precommit",
     "lint": "./scripts/lint",
@@ -26,6 +27,7 @@
   },
   "version": "0.0.1",
   "dependencies": {
+    "puppeteer-core": "9.1.1",
     "chrome-aws-lambda": "9.1.0",
     "golgoth": "2.0.0",
     "normalize-url": "6.0.0"

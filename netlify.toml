@@ -1,6 +1,7 @@
 [build]
-  command = "true"
+  command = "yarn run build"
   publish = "./html"
+  functions = "./dist-functions"
 
 [functions]
   directory = "./functions"
