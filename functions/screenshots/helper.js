@@ -2,16 +2,6 @@ const _ = require('golgoth/lodash');
 const chromium = require('chrome-aws-lambda');
 const normalizeUrl = require('normalize-url');
 
-// TODO:
-// Need to accept passing custom args, like a unique hash for cache busting
-// /screenshots/revv:abcef01/http/www.pixelastic.com
-// This should do exactly the same thing as without the revv:stuff, but would
-// allo cloudinary to cache it
-// any /key:value/ passed before the http/https is passed as option
-//
-// Need to deploy and test
-// Refactor and document
-
 module.exports = {
   /**
    * Parses an incoming request received by the handle, and return an object
@@ -21,14 +11,21 @@ module.exports = {
    *  - targetUrl: The final url to take a screenshot of
    **/
   parseRequest(event) {
-    const url = _.chain(event)
-      .get('path')
-      .replace('/screenshots/', '')
-      .thru((item) => {
-        const regex = /^(?<protocol>https?)\/(?<url>.*)$/;
-        const { groups } = regex.exec(item);
-        return `${groups.protocol}://${groups.url}`;
+    const regexp = new RegExp(
+      '^/screenshots/(?<raw_options>.*/)?(?<protocol>https?)/(?<url>.*)$'
+    );
+    const { groups } = event.path.match(regexp);
+
+    const url = `${groups.protocol}://${groups.url}`;
+
+    const options = _.chain(groups)
+      .get('raw_options', '')
+      .split('/')
+      .compact()
+      .map((item) => {
+        return item.split(':');
       })
+      .fromPairs()
       .value();
 
     const queryString = _.chain(event)
@@ -46,6 +43,7 @@ module.exports = {
 
     return {
       targetUrl,
+      options,
     };
   },
 
