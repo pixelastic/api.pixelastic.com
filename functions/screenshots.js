@@ -1,4 +1,4 @@
-const helper = require('./helper.js');
+const helper = require('./lib/screenshots.js');
 
 exports.handler = async (event, _content) => {
   const { targetUrl, options } = helper.parseRequest(event);

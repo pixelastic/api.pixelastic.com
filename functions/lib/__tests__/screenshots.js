@@ -1,6 +1,6 @@
-const current = require('../helper.js');
+const current = require('../screenshots.js');
 
-describe('screenshots helper', () => {
+describe('lib/screenshots.js', () => {
   describe('parseRequest', () => {
     it.each([
       [
