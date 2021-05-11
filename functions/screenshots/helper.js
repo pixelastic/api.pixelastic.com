@@ -13,6 +13,13 @@ const normalizeUrl = require('normalize-url');
 // Refactor and document
 
 module.exports = {
+  /**
+   * Parses an incoming request received by the handle, and return an object
+   * with the full url parsed into usable components
+   * @param {object} event The event object, as received by the handler
+   * @returns {object} A parsed object of usable properties
+   *  - targetUrl: The final url to take a screenshot of
+   **/
   parseRequest(event) {
     const url = _.chain(event)
       .get('path')
@@ -42,6 +49,11 @@ module.exports = {
     };
   },
 
+  /**
+   * Returns a buffer containing a PNG image of the given url
+   * @param {string} url Url to take a screenshot of
+   * @returns {Buffer} A PNG buffer of the screenshot
+   **/
   async getScreenshot(url) {
     const executablePath = await chromium.executablePath;
     const { args } = chromium;
