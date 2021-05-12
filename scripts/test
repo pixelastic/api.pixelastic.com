@@ -10,7 +10,7 @@ trap 'kill $(jobs -p)' EXIT
 
 # Start netlify dev
 export NETLIFY_SERVER_RUNNING=1
-netlify dev &
+netlify dev &>/dev/null &
 
 # Wait for the server to be running
 echo -n "Starting netlify dev server"

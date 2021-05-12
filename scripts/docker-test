@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+set -e
+
+IMAGE_NAME="pixelastic-api-test"
+CONTAINER_NAME="yarn-test"
+
+# Build the image
+docker build -t $IMAGE_NAME .
+
+# Remove the container if it exists
+# 2>/dev/null to remove the output
+# || true to prevent the whole script from failing
+docker rm $CONTAINER_NAME 2>/dev/null || true
+
+# Create a new container from the image and use it run the tests
+docker run \
+  --name $CONTAINER_NAME \
+  $IMAGE_NAME \
+  yarn run test --colors

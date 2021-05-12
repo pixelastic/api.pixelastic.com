@@ -1,0 +1,12 @@
+# Ignore everything by default
+*
+
+# Only copy allowed directories and files
+!jest.config.js
+!jest.setup.js
+!netlify.toml
+!package.json
+!scripts/
+!functions/
+!html/
+!yarn.lock
