@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+set -e
+
+echo "=========="
+whoami
+touch ./container.tx
+ls -l --color
+
