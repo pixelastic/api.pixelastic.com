@@ -9,4 +9,4 @@ services:
     volumes:
       - './functions:/home/circleci/project/functions'
       - './node_modules:/home/circleci/project/node_modules'
-    command: yarn run test --color
+    command: yarn run test --color ${COMMAND_ARGS}

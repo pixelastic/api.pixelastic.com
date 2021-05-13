@@ -19,7 +19,8 @@
     "serve": "./scripts/serve",
     "test": "./scripts/test",
     "test:watch": "./scripts/test --watch",
-    "test:visual": "./scripts/test-visual"
+    "test:visual": "./scripts/test-visual",
+    "test:visual:watch": "./scripts/test-visual --watch"
   },
   "version": "0.0.1",
   "dependencies": {
