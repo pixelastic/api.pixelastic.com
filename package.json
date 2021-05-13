@@ -17,11 +17,9 @@
     "lint:fix": "./scripts/lint-fix",
     "release": "./scripts/release",
     "serve": "./scripts/serve",
-    "serve:test": "./scripts/serve-test",
     "test": "./scripts/test",
-    "test:unit": "./scripts/test-unit",
-    "test:unit:watch": "./scripts/test-unit --watch",
-    "test:watch": "./scripts/test --watch"
+    "test:watch": "./scripts/test --watch",
+    "test:visual": "./scripts/test-visual"
   },
   "version": "0.0.1",
   "dependencies": {

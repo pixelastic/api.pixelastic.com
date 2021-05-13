@@ -3,6 +3,10 @@ services:
   visual:
     build:
       context: .
+      args:
+        HOST_USER: ${HOST_USER}
+        HOST_UID: ${HOST_UID}
     volumes:
       - './functions:/home/circleci/project/functions'
-    command: sh -c "./run"
+      - './node_modules:/home/circleci/project/node_modules'
+    command: yarn run test --color

@@ -1,6 +1,6 @@
 const got = require('golgoth/got');
 
-describe.integration('/screenshots/', () => {
+describe.visual('/screenshots/', () => {
   const serverUrl = 'http://localhost:8888';
   it.each([
     [

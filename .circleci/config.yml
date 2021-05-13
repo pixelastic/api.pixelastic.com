@@ -24,7 +24,11 @@ jobs:
       - *restore_cache
       - *yarn_install
       - *save_cache
-      - run: 'yarn run ci'
+      - run: 
+          name: 'CI Tests'
+          command: 'yarn run ci'
+          environment: 
+            ENABLE_VISUAL_REGRESSION_TESTS: 1
 
 workflows:
   version: 2

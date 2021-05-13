@@ -1,23 +1,25 @@
 #!/usr/bin/env bash
 set -e
 
-# Disable the opening of the browser
-export BROWSER=false
+# We start a netlify dev server and wait for it to be ready before running the
+# tests if we need to do some visual regression testing
+if [[ "$ENABLE_VISUAL_REGRESSION_TESTS" == "1" ]]; then
+  # Disable the opening of the browser
+  export BROWSER=false
 
-# Kill all background processes started by this script when it ends, or is
-# stopped
-trap 'kill $(jobs -p)' EXIT
+  # Kill all background processes started by this script when it ends, or is
+  # stopped
+  trap 'kill $(jobs -p)' EXIT
 
-# Start netlify dev
-export NETLIFY_SERVER_RUNNING=1
-netlify dev &>/dev/null &
+  # Start netlify dev
+  netlify dev &>/dev/null &
 
-# Wait for the server to be running
-echo -n "Starting netlify dev server"
-until curl --output /dev/null --silent --head --fail http://localhost:8888/; do
-  echo -n "."
-  sleep 1
-done
+  # Wait for the server to be running
+  echo -n "Starting netlify dev server"
+  until curl --output /dev/null --silent --head --fail http://localhost:8888/; do
+    echo -n "."
+    sleep 1
+  done
+fi
 
-# Running tests (potentially in watch mode)
 aberlaas test "$@"

@@ -4,7 +4,6 @@
 # Only copy allowed directories and files
 !jest.config.js
 !jest.setup.js
-!run
 !netlify.toml
 !package.json
 !scripts/
