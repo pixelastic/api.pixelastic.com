@@ -3,7 +3,7 @@ version: 2.1
 aliases:
   - &defaults
     docker:
-      - image: cimg/node:14.17.0-browsers
+      - image: cimg/node:16.1.0-browsers
   - &restore_cache
     restore_cache:
       key: yarn-cache-{{ checksum "yarn.lock" }}
@@ -24,10 +24,10 @@ jobs:
       - *restore_cache
       - *yarn_install
       - *save_cache
-      - run: 
+      - run:
           name: 'CI Tests'
           command: 'yarn run ci'
-          environment: 
+          environment:
             ENABLE_VISUAL_REGRESSION_TESTS: 1
 
 workflows:
