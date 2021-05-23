@@ -2368,10 +2368,10 @@ abab@^2.0.3, abab@^2.0.5:
   resolved "https://registry.npmjs.org/abab/-/abab-2.0.5.tgz#c0b678fb32d60fc1219c784d6a826fe385aeb79a"
   integrity sha512-9IK9EadsbHo6jLWIpxpR6pL0sazTXV6+SQv25ZB+F7Bj9mJNaOc4nCRabwd5M/JwmUa8idz6Eci6eKfJryPs6Q==
 
-aberlaas@1.20.0:
-  version "1.20.0"
-  resolved "https://registry.yarnpkg.com/aberlaas/-/aberlaas-1.20.0.tgz#e2c9a502ab4fac701616edf6a420efb85df80d20"
-  integrity sha512-G5f5yujVzcklY40lFAWTjONxaUBDdBNKX7jyqkA6xBzN98XVTGS91s10O81Lz0hb44QwM1CGaVMOcjVdd/XGAA==
+aberlaas@1.22.0:
+  version "1.22.0"
+  resolved "https://registry.yarnpkg.com/aberlaas/-/aberlaas-1.22.0.tgz#b5794cbc726bfe05d66d2db798b88278337d757b"
+  integrity sha512-IY3P89xuLdiH56QBBlPV1/KqmQgPc4R5jq2pkvRAsXrWmTJxDXtcC9kIjK27YnN224dbWh+wCb93U+29gqQ7UQ==
   dependencies:
     "@octokit/rest" "18.5.3"
     ci-info "2.0.0"
@@ -2383,7 +2383,7 @@ aberlaas@1.20.0:
     eslint-plugin-node "11.1.0"
     eslint-plugin-prettier "3.4.0"
     find-up "5.0.0"
-    firost "2.12.0"
+    firost "2.13.1"
     front-matter "4.0.2"
     golgoth "2.0.0"
     husky "4.3.8"
@@ -5360,10 +5360,10 @@ find-versions@^4.0.0:
   dependencies:
     semver-regex "^3.1.2"
 
-firost@2.12.0:
-  version "2.12.0"
-  resolved "https://registry.yarnpkg.com/firost/-/firost-2.12.0.tgz#3575c57bc817c3b8039d3fa887a8a990e3efff7f"
-  integrity sha512-dqA5gMwqkscooKaE6yoo04e/cEyzcMw+z65/ESO5KSOQi4eHNgefwYpMNGoDCIjJlvwFGraXYaZiFaLUkaM59g==
+firost@2.13.1:
+  version "2.13.1"
+  resolved "https://registry.yarnpkg.com/firost/-/firost-2.13.1.tgz#0471291f9a7944b3d7e581220427eac7a0387176"
+  integrity sha512-fqVa1vX35/zmgrbJb5+WJ1I1UFW1ah0zH2Xy/KCwBQ3Lp9urEJ1epQI4U8G7sZwkHGzg/mJpIdqn9PlNq6XHvA==
   dependencies:
     callsites "3.1.0"
     chokidar "3.5.1"
@@ -5374,11 +5374,11 @@ firost@2.12.0:
     fs-extra "10.0.0"
     globby "11.0.3"
     golgoth "2.0.0"
-    inquirer "7.3.3"
+    inquirer "8.1.0"
     is-glob "4.0.1"
     json-stable-stringify "1.0.1"
-    nanoid "3.1.22"
-    normalize-url "5.3.0"
+    nanoid "3.1.23"
+    normalize-url "6.0.0"
     ora "5.4.0"
     std-mocks "1.0.1"
     strip-ansi "6.0.0"
@@ -6418,21 +6418,22 @@ inquirer-autosubmit-prompt@^0.2.0:
     inquirer "^6.2.1"
     rxjs "^6.3.3"
 
-inquirer@7.3.3, inquirer@^7.0.0, inquirer@^7.3.3:
-  version "7.3.3"
-  resolved "https://registry.npmjs.org/inquirer/-/inquirer-7.3.3.tgz#04d176b2af04afc157a83fd7c100e98ee0aad003"
-  integrity sha512-JG3eIAj5V9CwcGvuOmoo6LB9kbAYT8HXffUl6memuszlwDC/qvFAJw49XJ5NROSFNPxp3iQg1GqkFhaY/CR0IA==
+inquirer@8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-8.1.0.tgz#68ce5ce5376cf0e89765c993d8b7c1e62e184d69"
+  integrity sha512-1nKYPoalt1vMBfCMtpomsUc32wmOoWXAoq3kM/5iTfxyQ2f/BxjixQpC+mbZ7BI0JUXHED4/XPXekDVtJNpXYw==
   dependencies:
     ansi-escapes "^4.2.1"
-    chalk "^4.1.0"
+    chalk "^4.1.1"
     cli-cursor "^3.1.0"
     cli-width "^3.0.0"
     external-editor "^3.0.3"
     figures "^3.0.0"
-    lodash "^4.17.19"
+    lodash "^4.17.21"
     mute-stream "0.0.8"
+    ora "^5.3.0"
     run-async "^2.4.0"
-    rxjs "^6.6.0"
+    rxjs "^6.6.6"
     string-width "^4.1.0"
     strip-ansi "^6.0.0"
     through "^2.3.6"
@@ -6454,6 +6455,25 @@ inquirer@^6.2.1, inquirer@^6.5.1:
     rxjs "^6.4.0"
     string-width "^2.1.0"
     strip-ansi "^5.1.0"
+    through "^2.3.6"
+
+inquirer@^7.0.0, inquirer@^7.3.3:
+  version "7.3.3"
+  resolved "https://registry.npmjs.org/inquirer/-/inquirer-7.3.3.tgz#04d176b2af04afc157a83fd7c100e98ee0aad003"
+  integrity sha512-JG3eIAj5V9CwcGvuOmoo6LB9kbAYT8HXffUl6memuszlwDC/qvFAJw49XJ5NROSFNPxp3iQg1GqkFhaY/CR0IA==
+  dependencies:
+    ansi-escapes "^4.2.1"
+    chalk "^4.1.0"
+    cli-cursor "^3.1.0"
+    cli-width "^3.0.0"
+    external-editor "^3.0.3"
+    figures "^3.0.0"
+    lodash "^4.17.19"
+    mute-stream "0.0.8"
+    run-async "^2.4.0"
+    rxjs "^6.6.0"
+    string-width "^4.1.0"
+    strip-ansi "^6.0.0"
     through "^2.3.6"
 
 into-stream@^3.1.0:
@@ -8495,10 +8515,10 @@ mute-stream@0.0.8:
   resolved "https://registry.npmjs.org/mute-stream/-/mute-stream-0.0.8.tgz#1630c42b2251ff81e2a283de96a5497ea92e5e0d"
   integrity sha512-nnbWWOkoWyUsTjKrhgD0dcz22mdkSnpYqbEjIm2nhwhuxlSkpywJmBo8h0ZqJdkp73mb90SssHkN4rsRaBAfAA==
 
-nanoid@3.1.22:
-  version "3.1.22"
-  resolved "https://registry.npmjs.org/nanoid/-/nanoid-3.1.22.tgz#b35f8fb7d151990a8aebd5aa5015c03cf726f844"
-  integrity sha512-/2ZUaJX2ANuLtTvqTlgqBQNJoQO398KyJgZloL0PZkC0dpysjncRUPsFe3DUPzz/y3h+u7C46np8RMuvF3jsSQ==
+nanoid@3.1.23:
+  version "3.1.23"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.1.23.tgz#f744086ce7c2bc47ee0a8472574d5c78e4183a81"
+  integrity sha512-FiB0kzdP0FFVGDKlRLEQ1BgDzU87dy5NnzjeW9YZNt+/c3+q82EQDUwniSAUxp/F0gFNI1ZhKU1FqYsMuqZVnw==
 
 nanomatch@^1.2.9:
   version "1.2.13"
@@ -8861,11 +8881,6 @@ normalize-url@2.0.1:
     query-string "^5.0.1"
     sort-keys "^2.0.0"
 
-normalize-url@5.3.0:
-  version "5.3.0"
-  resolved "https://registry.npmjs.org/normalize-url/-/normalize-url-5.3.0.tgz#8959b3cdaa295b61592c1f245dded34b117618dd"
-  integrity sha512-9/nOVLYYe/dO/eJeQUNaGUF4m4Z5E7cb9oNTKabH+bNf19mqj60txTcveQxL0GlcWLXCxkOu2/LwL8oW0idIDA==
-
 normalize-url@6.0.0:
   version "6.0.0"
   resolved "https://registry.npmjs.org/normalize-url/-/normalize-url-6.0.0.tgz#688ba4251cc46350f5adf4e65e14b7113a752684"
@@ -9134,7 +9149,7 @@ optionator@^0.9.1:
     type-check "^0.4.0"
     word-wrap "^1.2.3"
 
-ora@5.4.0, ora@^5.0.0:
+ora@5.4.0, ora@^5.0.0, ora@^5.3.0:
   version "5.4.0"
   resolved "https://registry.npmjs.org/ora/-/ora-5.4.0.tgz#42eda4855835b9cd14d33864c97a3c95a3f56bf4"
   integrity sha512-1StwyXQGoU6gdjYkyVcqOLnVlbKj+6yPNNOxJVgpt9t4eksKjiriiHuxktLYkgllwk+D6MbC4ihH84L1udRXPg==
@@ -10469,7 +10484,7 @@ run-parallel@^1.1.4, run-parallel@^1.1.9:
   dependencies:
     queue-microtask "^1.2.2"
 
-rxjs@^6.3.3, rxjs@^6.4.0, rxjs@^6.5.3, rxjs@^6.6.0, rxjs@^6.6.2, rxjs@^6.6.3, rxjs@^6.6.7:
+rxjs@^6.3.3, rxjs@^6.4.0, rxjs@^6.5.3, rxjs@^6.6.0, rxjs@^6.6.2, rxjs@^6.6.3, rxjs@^6.6.6, rxjs@^6.6.7:
   version "6.6.7"
   resolved "https://registry.npmjs.org/rxjs/-/rxjs-6.6.7.tgz#90ac018acabf491bf65044235d5863c4dab804c9"
   integrity sha512-hTdwr+7yYNIT5n4AMYp85KA6yw2Va0FLa3Rguvbpa4W3I5xynaBZo41cM3XM+4Q6fRMj3sBYIR1VAmZMXYJvRQ==
