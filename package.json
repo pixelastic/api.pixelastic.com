@@ -2,7 +2,7 @@
   "devDependencies": {
     "aberlaas": "1.22.0",
     "jest-image-snapshot": "4.5.0",
-    "netlify-cli": "3.30.4"
+    "netlify-cli": "3.30.6"
   },
   "files": [
     "lib/*.js"
