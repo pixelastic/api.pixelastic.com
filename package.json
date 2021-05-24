@@ -10,6 +10,9 @@
   "license": "MIT",
   "main": "lib/main.js",
   "name": "api.pixelastic.com",
+  "engines": {
+    "node": ">=14.17.0"
+  },
   "scripts": {
     "ci": "./scripts/ci",
     "husky:precommit": "./scripts/husky-precommit",
