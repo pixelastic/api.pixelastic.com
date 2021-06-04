@@ -1,5 +1,5 @@
 # Build from same image as CircleCI
-FROM cimg/node:14.17.0-browsers
+FROM cimg/node:16.3.0-browsers
 
 # Let Jest know that we should enable visual regression tests
 ENV ENABLE_VISUAL_REGRESSION_TESTS=1
