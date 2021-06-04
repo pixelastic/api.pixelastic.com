@@ -25,12 +25,12 @@ describe.visual('/screenshots/', () => {
       responseType: 'buffer',
     });
 
-    const errorMessage = dedent`
-      apiUrl:    ${apiUrl}
-      targetUrl: ${targetUrl}
-      url:       ${url}
-    `;
+    // const errorMessage = dedent`
+    //   apiUrl:    ${apiUrl}
+    //   targetUrl: ${targetUrl}
+    //   url:       ${url}
+    // `;
 
-    expect(actual.rawBody, errorMessage).toMatchImageSnapshot();
+    expect(actual.rawBody).toMatchImageSnapshot();
   });
 });
