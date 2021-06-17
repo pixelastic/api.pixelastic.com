@@ -5,3 +5,7 @@
 # node_modules in subfolders are not ignored by default
 node_modules/
 
+# Testing the functions on CircleCI creates compiled version of the functions in
+# this folder
+.netlify/
+
