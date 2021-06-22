@@ -30,6 +30,6 @@
   "dependencies": {
     "chrome-aws-lambda": "10.0.0",
     "golgoth": "2.0.0",
-    "normalize-url": "6.0.1"
+    "normalize-url": "6.1.0"
   }
 }
