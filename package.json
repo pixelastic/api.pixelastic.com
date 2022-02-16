@@ -3,7 +3,7 @@
     "aberlaas": "1.25.0",
     "jest-image-snapshot": "4.5.1",
     "netlify-cli": "6.8.5",
-    "puppeteer-core": "10.4.0"
+    "puppeteer-core": "11.0.0"
   },
   "files": [
     "lib/*.js"
