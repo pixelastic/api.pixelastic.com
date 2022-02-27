@@ -2,7 +2,7 @@
   "devDependencies": {
     "aberlaas": "1.25.0",
     "jest-image-snapshot": "4.5.1",
-    "netlify-cli": "6.8.5",
+    "netlify-cli": "6.15.0",
     "puppeteer-core": "11.0.0"
   },
   "files": [
