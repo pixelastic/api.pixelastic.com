@@ -1,9 +1,9 @@
 {
   "devDependencies": {
     "aberlaas": "1.25.0",
-    "jest-image-snapshot": "4.5.1",
+    "jest-image-snapshot": "6.4.0",
     "netlify-cli": "6.15.0",
-    "puppeteer-core": "11.0.0"
+    "puppeteer-core": "23.6.0"
   },
   "files": [
     "lib/*.js"
@@ -30,6 +30,6 @@
   "dependencies": {
     "chrome-aws-lambda": "10.1.0",
     "golgoth": "2.1.0",
-    "normalize-url": "6.1.0"
+    "normalize-url": "8.0.1"
   }
 }
